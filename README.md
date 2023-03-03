@@ -1,4 +1,4 @@
-# OquvMarkazbot
+## OquvMarkazbot
 Kerakli kutubxonalarni o'rnatish
 ```shell
 $ pip install -r requirements.txt
