@@ -14,6 +14,7 @@ from loader import dp, db, bot, temp
 async def edit(msg : types.Message, state : FSMContext):
     data = db.select_all_kurs()
     if data != []:
+        await msg.answer('<b>Kursni tahrirlash</b>', reply_markup=types.ReplyKeyboardRemove())
         await msg.answer("<b>Tahrirlamoqchi bo'lgan kursni tanlang : </b>", reply_markup=kurslar(data))
         await state.set_state('edit_kurs')
     else:
